@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="CityGuidesDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="6st-v9-4hM" id="UdY-HI-Vjv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rtm-5d-PWx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sYa-VS-XzQ">
+                    <rect key="frame" x="20" y="270" width="335" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="JJA-5p-xqI"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zeW-zI-O3C">
+                    <rect key="frame" x="20" y="323" width="335" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="AVB-MI-3M4"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6st-v9-4hM">
+                    <rect key="frame" x="20" y="391" width="335" height="48"/>
+                    <color key="backgroundColor" red="0.28373309969999999" green="0.48197531700000001" blue="0.82648730280000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="4xP-CV-ZOE"/>
+                    </constraints>
+                    <state key="normal" title="Log In">
+                        <color key="titleColor" red="0.93725490199999995" green="0.95686274510000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sYa-VS-XzQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="250" id="013-AD-m6H"/>
+                <constraint firstItem="6st-v9-4hM" firstAttribute="top" secondItem="zeW-zI-O3C" secondAttribute="bottom" constant="20" id="3fz-fB-wrl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sYa-VS-XzQ" secondAttribute="trailing" constant="20" id="BfJ-oR-m9r"/>
+                <constraint firstItem="6st-v9-4hM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="c9m-5C-ouL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6st-v9-4hM" secondAttribute="trailing" constant="20" id="ct6-zq-Bwg"/>
+                <constraint firstItem="sYa-VS-XzQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hyN-dk-bGk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zeW-zI-O3C" secondAttribute="trailing" constant="20" id="mrX-tB-tHm"/>
+                <constraint firstItem="zeW-zI-O3C" firstAttribute="top" secondItem="sYa-VS-XzQ" secondAttribute="bottom" constant="5" id="puG-PI-vir"/>
+                <constraint firstItem="zeW-zI-O3C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wCb-56-7F0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
