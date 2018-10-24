@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSerif-Regular.ttf">
+            <string>NotoSerif</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailCell" id="8VR-Jx-nUq" customClass="DetailCell" customModule="CityGuidesDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="266" height="376"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="266" height="376"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyr-Sq-ToX">
+                        <rect key="frame" x="0.0" y="0.0" width="266" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="NDt-bg-d9G"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-BX-08h" customClass="Label" customModule="CityGuidesDemo" customModuleProvider="target">
+                        <rect key="frame" x="8" y="205" width="250" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="FdX-aD-HY3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="typeLabel" value="Bold"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-Lh-QRb">
+                        <rect key="frame" x="8" y="259" width="250" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGa-m3-ngF">
+                        <rect key="frame" x="8" y="339" width="250" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="nvU-48-mEV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NotoSerif" family="Noto Serif" pointSize="12"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DBd-Lh-QRb" secondAttribute="trailing" constant="8" id="6MM-1A-9eB"/>
+                <constraint firstItem="xyr-Sq-ToX" firstAttribute="top" secondItem="8VR-Jx-nUq" secondAttribute="top" id="7wv-Ht-dHI"/>
+                <constraint firstItem="xyr-Sq-ToX" firstAttribute="leading" secondItem="8VR-Jx-nUq" secondAttribute="leading" id="E4c-HJ-ICG"/>
+                <constraint firstAttribute="trailing" secondItem="EiS-BX-08h" secondAttribute="trailing" constant="8" id="K7t-Jd-bkC"/>
+                <constraint firstItem="EiS-BX-08h" firstAttribute="top" secondItem="xyr-Sq-ToX" secondAttribute="bottom" constant="5" id="MoQ-U5-rJM"/>
+                <constraint firstItem="DBd-Lh-QRb" firstAttribute="top" secondItem="EiS-BX-08h" secondAttribute="bottom" constant="12" id="Qih-EQ-qTP"/>
+                <constraint firstItem="fGa-m3-ngF" firstAttribute="top" secondItem="DBd-Lh-QRb" secondAttribute="bottom" constant="12" id="aMj-TB-0GD"/>
+                <constraint firstAttribute="bottom" secondItem="fGa-m3-ngF" secondAttribute="bottom" constant="5" id="bo0-9f-uEX"/>
+                <constraint firstAttribute="trailing" secondItem="xyr-Sq-ToX" secondAttribute="trailing" id="oHV-cF-GJK"/>
+                <constraint firstItem="EiS-BX-08h" firstAttribute="leading" secondItem="8VR-Jx-nUq" secondAttribute="leading" constant="8" id="tDY-mF-CWf"/>
+                <constraint firstAttribute="trailing" secondItem="fGa-m3-ngF" secondAttribute="trailing" constant="8" id="uCl-a1-BEC"/>
+                <constraint firstItem="DBd-Lh-QRb" firstAttribute="leading" secondItem="8VR-Jx-nUq" secondAttribute="leading" constant="8" id="wtV-RL-993"/>
+                <constraint firstItem="fGa-m3-ngF" firstAttribute="leading" secondItem="8VR-Jx-nUq" secondAttribute="leading" constant="8" id="zt5-bi-kcB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jq6-j8-waF"/>
+            <size key="customSize" width="266" height="376"/>
+            <connections>
+                <outlet property="buttonExplore" destination="fGa-m3-ngF" id="Bf4-VN-pcf"/>
+                <outlet property="desc" destination="DBd-Lh-QRb" id="IhL-sL-4a5"/>
+                <outlet property="imageHeader" destination="xyr-Sq-ToX" id="DIE-Bp-BcP"/>
+                <outlet property="name" destination="EiS-BX-08h" id="69Y-N0-nbp"/>
+            </connections>
+            <point key="canvasLocation" x="-6.4000000000000004" y="53.073463268365821"/>
+        </collectionViewCell>
+    </objects>
+</document>

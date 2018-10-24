@@ -18,7 +18,7 @@ protocol HomeViewModelInput {
 }
 
 protocol HomeViewModelOutput {
-//    var items: Observable<[DetailModel]> { get }
+    var items: Observable<[DetailModel]> { get }
 }
 
 protocol IHomeViewModel {
@@ -48,15 +48,25 @@ class HomeViewModel: IHomeViewModel, HomeViewModelInput, HomeViewModelOutput {
         return self.coordinator.transition(to: .detail).presentation
     }
     
-//    var model: Observable<[DetailModel]> = .just([
-//        DetailModel(id: 1,
-//                    title: "Bali",
-//                    subTitle: "Kintamani",
-//                    location: "Indonesia",
-//                    image: )
-//        
-//    ])
-    
+    var items: Observable<[DetailModel]> = .just([
+        DetailModel(id: 1,
+                    title: "Ālabama",
+                    subTitle: "Argentina",
+                    location: "Sauolo Paulo",
+                    image: "/"),
+        
+        DetailModel(id: 1,
+                    title: "Ālabama",
+                    subTitle: "Argentina",
+                    location: "Sauolo Paulo",
+                    image: "/"),
+        
+        DetailModel(id: 1,
+                    title: "Ālabama",
+                    subTitle: "Argentina",
+                    location: "Sauolo Paulo",
+                    image: "/"),
+        ])
     
     init(coordinator: AnyCoordinator<HomeRoute>) {
         self.coordinator = coordinator

@@ -13,18 +13,29 @@ import RxCocoa
 class HomeViewController: UIViewController, BindableType {
     
     var viewModel: HomeViewModel!
+    private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Home"
+        collectionView.register(DetailCell.self, forCellWithReuseIdentifier: "DetailCell")
+        collectionView.delegate = nil
+        collectionView.dataSource = nil
     }
     
     func bindViewModel() {
-        
+        viewModel.output.items
+            .bind(to: collectionView.rx.items(cellIdentifier: "DetailCell", cellType: DetailCell.self)) {
+                (_, element, cell) in
+            }
+            .disposed(by: disposeBag)
     }
     
+}
+
+extension HomeViewController: UICollectionViewDelegate {
     
 }

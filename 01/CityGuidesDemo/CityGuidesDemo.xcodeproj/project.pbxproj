@@ -24,6 +24,13 @@
 		D652B48F217F136600723B35 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D652B48E217F136600723B35 /* LoginViewController.xib */; };
 		D652B491217F13C000723B35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652B490217F13C000723B35 /* LoginViewController.swift */; };
 		D652B493217F144900723B35 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652B492217F144900723B35 /* LoginViewModel.swift */; };
+		D652B497218033F200723B35 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D652B496218033F200723B35 /* DetailCell.xib */; };
+		D652B49F2180357B00723B35 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652B49E2180357B00723B35 /* UILabel.swift */; };
+		D652B4A02180365C00723B35 /* NotoSerif-Bold.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B49A2180355300723B35 /* NotoSerif-Bold.ttf */; };
+		D652B4A12180365C00723B35 /* NotoSerif-BoldItalic.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B49C2180355300723B35 /* NotoSerif-BoldItalic.ttf */; };
+		D652B4A22180365C00723B35 /* NotoSerif-Italic.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B49B2180355300723B35 /* NotoSerif-Italic.ttf */; };
+		D652B4A32180365C00723B35 /* NotoSerif-Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B4992180355200723B35 /* NotoSerif-Regular.ttf */; };
+		D652B4A5218037AA00723B35 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652B4A4218037AA00723B35 /* DetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +56,13 @@
 		D652B490217F13C000723B35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D652B492217F144900723B35 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D652B494217F1ACE00723B35 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D652B496218033F200723B35 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		D652B4992180355200723B35 /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
+		D652B49A2180355300723B35 /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
+		D652B49B2180355300723B35 /* NotoSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Italic.ttf"; sourceTree = "<group>"; };
+		D652B49C2180355300723B35 /* NotoSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D652B49E2180357B00723B35 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		D652B4A4218037AA00723B35 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,8 @@
 		D652B471217DF7EC00723B35 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D652B49D2180356F00723B35 /* UI */,
+				D652B4982180353D00723B35 /* Fonts */,
 				D652B475217EE07500723B35 /* Utils */,
 			);
 			path = Common;
@@ -177,6 +193,7 @@
 		D652B47F217EEA6B00723B35 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D652B4952180338900723B35 /* Components */,
 				D652B482217EEAE100723B35 /* ViewController */,
 				D652B484217EEB4600723B35 /* HomeViewModel.swift */,
 				D652B488217EF62B00723B35 /* DetailModel.swift */,
@@ -209,6 +226,34 @@
 				D652B490217F13C000723B35 /* LoginViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D652B4952180338900723B35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D652B496218033F200723B35 /* DetailCell.xib */,
+				D652B4A4218037AA00723B35 /* DetailCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D652B4982180353D00723B35 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D652B49A2180355300723B35 /* NotoSerif-Bold.ttf */,
+				D652B49C2180355300723B35 /* NotoSerif-BoldItalic.ttf */,
+				D652B49B2180355300723B35 /* NotoSerif-Italic.ttf */,
+				D652B4992180355200723B35 /* NotoSerif-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D652B49D2180356F00723B35 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D652B49E2180357B00723B35 /* UILabel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +321,7 @@
 				D652B467217DF76800723B35 /* LaunchScreen.storyboard in Resources */,
 				D652B464217DF76800723B35 /* Assets.xcassets in Resources */,
 				D652B487217EF49A00723B35 /* HomeViewController.xib in Resources */,
+				D652B497218033F200723B35 /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +404,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D652B4A02180365C00723B35 /* NotoSerif-Bold.ttf in Sources */,
+				D652B4A12180365C00723B35 /* NotoSerif-BoldItalic.ttf in Sources */,
+				D652B4A5218037AA00723B35 /* DetailCell.swift in Sources */,
+				D652B4A22180365C00723B35 /* NotoSerif-Italic.ttf in Sources */,
+				D652B4A32180365C00723B35 /* NotoSerif-Regular.ttf in Sources */,
 				D652B47C217EE0E400723B35 /* MainRoute.swift in Sources */,
+				D652B49F2180357B00723B35 /* UILabel.swift in Sources */,
 				D652B479217EE0A700723B35 /* BindableType.swift in Sources */,
 				D652B477217EE08B00723B35 /* NibIdentifiable.swift in Sources */,
 				D652B489217EF62B00723B35 /* DetailModel.swift in Sources */,

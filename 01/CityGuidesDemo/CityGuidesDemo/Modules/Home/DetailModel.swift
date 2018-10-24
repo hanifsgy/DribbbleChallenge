@@ -13,5 +13,5 @@ struct DetailModel {
     var title: String?
     var subTitle: String?
     var location: String?
-    var image: UIImage?
+    var image: String?
 }

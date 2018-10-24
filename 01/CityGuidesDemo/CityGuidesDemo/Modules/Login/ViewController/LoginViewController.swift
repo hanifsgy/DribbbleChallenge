@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Login"
     }
     
     func bindViewModel() {
