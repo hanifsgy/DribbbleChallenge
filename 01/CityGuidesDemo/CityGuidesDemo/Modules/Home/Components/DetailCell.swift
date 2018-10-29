@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import RxSwift
 
-class DetailCell: UICollectionViewCell {
+class DetailCell: UITableViewCell {
     
-    @IBOutlet weak var imageHeader: UIImageView!
-    @IBOutlet weak var name: Label!
-    @IBOutlet weak var desc: UITextView!
-    @IBOutlet weak var buttonExplore: UIButton!
+    var disposeBag: DisposeBag = DisposeBag()
     
-    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

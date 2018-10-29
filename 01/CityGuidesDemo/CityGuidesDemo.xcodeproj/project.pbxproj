@@ -31,6 +31,11 @@
 		D652B4A22180365C00723B35 /* NotoSerif-Italic.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B49B2180355300723B35 /* NotoSerif-Italic.ttf */; };
 		D652B4A32180365C00723B35 /* NotoSerif-Regular.ttf in Sources */ = {isa = PBXBuildFile; fileRef = D652B4992180355200723B35 /* NotoSerif-Regular.ttf */; };
 		D652B4A5218037AA00723B35 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652B4A4218037AA00723B35 /* DetailCell.swift */; };
+		D6905D812186CD9000668E05 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6905D802186CD9000668E05 /* NetworkService.swift */; };
+		D6905D832186CDF700668E05 /* RequestLoadingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6905D822186CDF700668E05 /* RequestLoadingPlugin.swift */; };
+		D6905D852186CFCB00668E05 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6905D842186CFCB00668E05 /* NetworkError.swift */; };
+		D6905D872186D3CE00668E05 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6905D862186D3CE00668E05 /* ErrorResponse.swift */; };
+		D6905D892186D54700668E05 /* CityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6905D882186D54700668E05 /* CityAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +68,11 @@
 		D652B49C2180355300723B35 /* NotoSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D652B49E2180357B00723B35 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		D652B4A4218037AA00723B35 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		D6905D802186CD9000668E05 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D6905D822186CDF700668E05 /* RequestLoadingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoadingPlugin.swift; sourceTree = "<group>"; };
+		D6905D842186CFCB00668E05 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D6905D862186D3CE00668E05 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		D6905D882186D54700668E05 /* CityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 		D652B45B217DF76700723B35 /* CityGuidesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D6905D7D2186CD5E00668E05 /* Networking */,
 				D652B471217DF7EC00723B35 /* Common */,
 				D652B46E217DF77300723B35 /* Modules */,
 				D652B463217DF76800723B35 /* Assets.xcassets */,
@@ -256,6 +267,34 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		D6905D7D2186CD5E00668E05 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D6905D7F2186CD7900668E05 /* Model */,
+				D6905D7E2186CD6F00668E05 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D6905D7E2186CD6F00668E05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D6905D802186CD9000668E05 /* NetworkService.swift */,
+				D6905D822186CDF700668E05 /* RequestLoadingPlugin.swift */,
+				D6905D842186CFCB00668E05 /* NetworkError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D6905D7F2186CD7900668E05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6905D862186D3CE00668E05 /* ErrorResponse.swift */,
+				D6905D882186D54700668E05 /* CityAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,7 +418,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CityGuidesDemo/Pods-CityGuidesDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/rx-coordinator/RxCoordinator.framework",
 			);
@@ -388,7 +432,12 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoordinator.framework",
 			);
@@ -417,9 +466,14 @@
 				D652B485217EEB4600723B35 /* HomeViewModel.swift in Sources */,
 				D652B45D217DF76700723B35 /* AppDelegate.swift in Sources */,
 				D652B48B217F104100723B35 /* CustomPresentations.swift in Sources */,
+				D6905D892186D54700668E05 /* CityAPI.swift in Sources */,
 				D652B47E217EEA2E00723B35 /* HomeRoute.swift in Sources */,
 				D652B493217F144900723B35 /* LoginViewModel.swift in Sources */,
+				D6905D852186CFCB00668E05 /* NetworkError.swift in Sources */,
+				D6905D832186CDF700668E05 /* RequestLoadingPlugin.swift in Sources */,
+				D6905D812186CD9000668E05 /* NetworkService.swift in Sources */,
 				D652B481217EEA8700723B35 /* HomeViewController.swift in Sources */,
+				D6905D872186D3CE00668E05 /* ErrorResponse.swift in Sources */,
 				D652B470217DF7C100723B35 /* MainViewController.swift in Sources */,
 				D652B491217F13C000723B35 /* LoginViewController.swift in Sources */,
 			);

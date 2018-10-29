@@ -8,5 +8,7 @@ target 'CityGuidesDemo' do
   # Pods for CityGuidesDemo
   pod 'rx-coordinator'
   # pod 'Hero'
-  pod 'Action'  
+  pod 'Action'
+  pod 'RxDataSources', '~> 3.0'
+  pod 'Moya/RxSwift', '~> 10.0.2'
 end

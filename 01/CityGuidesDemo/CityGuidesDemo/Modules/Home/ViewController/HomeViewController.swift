@@ -15,27 +15,35 @@ class HomeViewController: UIViewController, BindableType {
     var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Home"
-        collectionView.register(DetailCell.self, forCellWithReuseIdentifier: "DetailCell")
-        collectionView.delegate = nil
-        collectionView.dataSource = nil
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.registerCell(type: DetailCell.self)
     }
     
     func bindViewModel() {
-        viewModel.output.items
-            .bind(to: collectionView.rx.items(cellIdentifier: "DetailCell", cellType: DetailCell.self)) {
-                (_, element, cell) in
-            }
-            .disposed(by: disposeBag)
     }
     
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(type: DetailCell.self)
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
 }

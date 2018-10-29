@@ -1,0 +1,19 @@
+PODS:
+  - Disk (0.4.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+
+DEPENDENCIES:
+  - Disk (~> 0.4.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+
+SPEC CHECKSUMS:
+  Disk: ef2956657d5bb56034b38b29b352170165226440
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+
+PODFILE CHECKSUM: 8eb7c355121282bd3809448990e7e02ce68f65c1
+
+COCOAPODS: 1.4.0

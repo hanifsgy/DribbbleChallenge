@@ -6,6 +6,7 @@ Original design from dribbble **Jaeseong Jeong**  check this awesome design - ht
 ### Requirements
 1. RxCoordinator - https://github.com/XavierDK/Coordinator
 1. Action - https://github.com/RxSwiftCommunity/Action
+1. Moya/RxSwift - https://github.com/Moya/Moya
 
 
 ### Dependency Management
